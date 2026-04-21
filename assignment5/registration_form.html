@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .form {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    div {
+        background-color: black;
+        color: antiquewhite;
+        border: 1cap;
+        border-radius: 2px solid blue;
+        border-width: 25px;
+        height: 400px;
+        width: 350px;
+        padding: 40px;
+        text-align: start;
+        align-items: center;
+
+    }
+
+    div label {
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    div input {
+        margin-left: 20px;
+        padding: 5px;
+        margin-top: 10px;
+    }
+
+    #secondiv {
+        display: none;
+    }
+</style>
+
+<body>
+    <div id="maindiv">
+        <form id="MyForm">
+            <center>
+
+                <label>Name:</label>
+                <input type="text" placeholder="Enter Your Name" name="name">
+
+                <br>
+                <label>Age:</label>
+                <input type="number" name="age" placeholder=" Your Age">
+                <br>
+                <br>
+
+                <label>Gender:</label>
+                <input type="radio" name="Gender">
+                <label>Male</label>
+                <input type="radio" name="Gender">
+                <label>Female</label>
+                <input type="radio" name="Gender">
+                <label>Other</label>
+                <br>
+                <br>
+                <label>Address:</label>
+                <input type="text" class="address" name="address" placeholder="Enter Your address"
+                    style="height: 80px; ">
+                <br>
+                <br>
+                <input type="checkbox">
+                <label> I agree to the terms and conditions</label>
+                <br>
+                <br>
+
+                <br>
+                <button
+                    style="background-color: rgb(59, 154, 59);border-style:none; color:antiquewhite; padding:auto;">Submit</button>
+            </center>
+        </form>
+    </div>
+    <div id="secondiv">
+        <label>User Name:</label>
+        <input type="userneme" placeholder="diwakar2233">
+        <br>
+        <br>
+        <label>Password:</label>
+        <input type="password" placeholder="abc@1234 hover" style="">
+        <br>
+    </div>
+    <script src="../main.js"></script>
+</body>
+
+</html>
