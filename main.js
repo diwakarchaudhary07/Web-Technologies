@@ -14,7 +14,8 @@ main.addEventListener("click", function (e) {
             return;
         }
         if (e.target.innerHTML == "=") {
-            result.value = evel
+            result.value = evel(result.value);
+            return;
         }
         let data = e.target.innerHTML;
         result.value += data;
