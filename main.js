@@ -1,18 +1,23 @@
-document.getElementById("MyForm").addEventListener("submit", function (event) {
-    // Default action रोकना
-    event.preventDefault();
+let result = document.getElementById("result");
+let results = "";
+result.value = results;
 
-    // // अब आप खुद डेटा handle कर सकते हैं
-    let name = event.target.name.value;
-    let age = event.target.age.value;
-    let address = event.target.address.value;
-    let gender = event.target.Gender.value;
+let main = document.getElementById("mainDiv");
+main.addEventListener("click", function (e) {
+    if (e.target.className == "btn") {
+        if (e.target.innerHTML == "AC") {
+            result.value = "";
+            return;
+        }
+        if (e.target.innerHTML == "C") {
+            result.value = result.value.slice(0, -1);
+            return;
+        }
+        if (e.target.innerHTML == "=") {
+            result.value
+        }
+        let data = e.target.innerHTML;
+        result.value += data;
+    }
 
-    let div = document.createElement("div");
-    div.innerHTML = `name : ${name} age:${age} address: ${address} gender: ${gender}`;
-    // document.body.appendChild(div);
-    document.getElementById("maindiv").style.display = "none";
-    document.getElementById("secondiv").style.display = "block";
-
-
-});
+})

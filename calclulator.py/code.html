@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        list-style: none;
+        padding: 10px;
+        background-color: rgb(169, 169, 169);
+    }
+
+    .main {
+        background-color: rgb(84, 78, 78);
+        height: 400px;
+        width: 400px;
+        border: 5px solid black;
+        border-radius: 10px;
+
+
+    }
+
+    #result {
+        margin: 8px;
+        padding: 10px;
+        justify-content: center;
+        width: 90%;
+        background-color: rgb(104, 102, 102);
+        color: wheat;
+
+    }
+
+    button {
+        margin: 10px;
+        text-align: top;
+        height: 35px;
+        width: 50px;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgb(44, 44, 46);
+        color: wheat;
+    }
+
+    .numbers {
+        padding-top: 30px;
+        display: flex;
+    }
+
+    .func button {
+        background-color: red;
+    }
+
+    .operator button {
+        background-color: rgb(40, 36, 36);
+    }
+</style>
+
+<body>
+    <div class="main">
+        <div class="result">
+            <input id="result" type="text" readonly>
+        </div>
+        <div class="numbers" id="mainDiv">
+            <div class="func">
+                <button class="btn">Rate Set</button>
+                <button class="btn">%</button>
+                <button class="btn">C</button>
+                <button class="btn">AC</button>
+            </div>
+            <div class="button">
+                <button class="btn">1</button>
+                <button class="btn">2</button>
+                <button class="btn">3</button>
+                <button class="btn">4</button>
+                <button class="btn">5</button>
+                <button class="btn">6</button>
+                <button class="btn">7</button>
+                <button class="btn">8</button>
+                <button class="btn">9</button>
+                <button class="btn">0</button>
+                <button class="btn">.</button>
+                <button class="btn" style="background-color: rgb(36, 35, 35);">=</button>
+            </div>
+            <div class="operator">
+                <button class="btn">/</button>
+                <button class="btn">*</button>
+                <button class="btn">-</button>
+                <button class="btn">+</button>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="calculator">
+    </div>
+    <script src="../main.js"></script>
+</body>
+
+</html>
