@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student ID Card</title>
+
+    <style>
+        body {
+            background: #f0f0f0;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Card */
+        .card {
+            width: 300px;
+            height: 420px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            padding: 20px;
+            color: white;
+        }
+
+        /* Photo */
+        .photo img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-top: -50px;
+            border: 4px solid white;
+        }
+
+        /* Info */
+        .info {
+            padding: 15px;
+        }
+
+        .info h2 {
+            margin: 10px 0 5px;
+        }
+
+        .info p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        /* Button */
+        button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: none;
+            background: #4facfe;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="card" id="card">
+
+        <div class="header">
+            <h2>ABC College</h2>
+            <p>Student ID Card</p>
+        </div>
+
+        <div class="photo">
+            <img id="img" src="https://via.placeholder.com/100">
+        </div>
+
+        <div class="info">
+            <h2 id="name">Diwakar</h2>
+            <p id="course">BCA</p>
+            <p id="roll">Roll No: 12345</p>
+            <p id="valid">Valid Till: 2027</p>
+
+            <button onclick="changeData()">Change Data</button>
+        </div>
+
+    </div>
+
+    <script>
+        function changeData() {
+            document.getElementById("name").innerHTML = "Rahul Kumar";
+            document.getElementById("course").innerHTML = "B.Tech";
+            document.getElementById("roll").innerHTML = "Roll No: 67890";
+        }
+    </script>
+
+</body>
+
+</html>
