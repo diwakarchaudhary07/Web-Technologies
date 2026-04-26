@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Card UI</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #0d0d0d;
+            font-family: Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Card Container */
+        .card {
+            width: 300px;
+            height: 180px;
+            border-radius: 20px;
+            padding: 20px;
+            color: white;
+            position: relative;
+            background: linear-gradient(135deg, #ff00cc, #3333ff);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: 0.4s;
+        }
+
+        /* Hover Effect */
+        .card:hover {
+            transform: scale(1.05) rotate(-1deg);
+        }
+
+        /* Chip */
+        .chip {
+            width: 50px;
+            height: 35px;
+            background: gold;
+            border-radius: 8px;
+        }
+
+        /* Number */
+        .number {
+            margin-top: 20px;
+            letter-spacing: 2px;
+            font-size: 18px;
+        }
+
+        /* Name */
+        .name {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+
+        /* Button */
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            background: #ff00cc;
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div>
+        <div class="card" id="card">
+            <div class="chip"></div>
+            <div class="number" id="number">**** **** **** 1234</div>
+            <div class="name">Diwakar</div>
+        </div>
+
+        <button onclick="changeCard()">Change Card</button>
+    </div>
+
+    <script>
+        function changeCard() {
+            let card = document.getElementById("card");
+            let number = document.getElementById("number");
+
+            // Random gradient
+            let colors = [
+                "linear-gradient(135deg, #ff00cc, #3333ff)",
+                "linear-gradient(135deg, #00ffcc, #0066ff)",
+                "linear-gradient(135deg, #ff6600, #ff0000)"
+            ];
+
+            let random = Math.floor(Math.random() * colors.length);
+            card.style.background = colors[random];
+
+            // Random number
+            let num = "**** **** **** " + Math.floor(1000 + Math.random() * 9000);
+            number.innerHTML = num;
+        }
+    </script>
+
+</body>
+
+</html>
