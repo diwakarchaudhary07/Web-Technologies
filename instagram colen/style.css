@@ -1,0 +1,54 @@
+body {
+    font-family: Arial;
+    background: #fafafa;
+    text-align: center;
+}
+
+h1 {
+    background: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.upload-box {
+    margin: 20px;
+}
+
+input {
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.post {
+    background: white;
+    width: 300px;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.post img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.comments {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.comments p {
+    margin: 5px 0;
+}
