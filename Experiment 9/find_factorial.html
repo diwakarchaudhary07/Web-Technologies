@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h3>Find Factorial</h3>
+
+    <input type="number" id="fact">
+    <button onclick="findFactorial()">Find</button>
+
+    <p id="result3"></p>
+
+    <script>
+        function findFactorial() {
+            let num = parseInt(document.getElementById("fact").value);
+            let fact = 1;
+
+            if (num < 0) {
+                document.getElementById("result3").innerText = "Not valid for negative numbers";
+                return;
+            }
+
+            for (let i = 1; i <= num; i++) {
+                fact *= i;
+            }
+
+            document.getElementById("result3").innerText = "Factorial: " + fact;
+        }
+    </script>
+
+</body>
+
+</html>
