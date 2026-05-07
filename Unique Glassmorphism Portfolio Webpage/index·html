@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoWave UI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a, #1e293b, #312e81);
+            overflow-x: hidden;
+            color: white;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(70px);
+            opacity: 0.5;
+            animation: move 12s infinite alternate ease-in-out;
+        }
+
+        .blob1 {
+            width: 300px;
+            height: 300px;
+            background: #7c3aed;
+            top: -50px;
+            left: -50px;
+        }
+
+        .blob2 {
+            width: 250px;
+            height: 250px;
+            background: #06b6d4;
+            bottom: 0;
+            right: 0;
+        }
+
+        @keyframes move {
+            from {
+                transform: translateY(0px) translateX(0px);
+            }
+
+            to {
+                transform: translateY(40px) translateX(30px);
+            }
+        }
+
+        .container {
+            position: relative;
+            z-index: 10;
+            padding: 40px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: #38bdf8;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            margin-left: 25px;
+            transition: 0.3s;
+            font-weight: 500;
+        }
+
+        .menu a:hover {
+            color: #38bdf8;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-text span {
+            color: #38bdf8;
+        }
+
+        .hero-text p {
+            color: #cbd5e1;
+            max-width: 600px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(90deg, #06b6d4, #7c3aed);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+        }
+
+        .card {
+            width: 340px;
+            padding: 30px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #38bdf8;
+        }
+
+        .card p {
+            color: #e2e8f0;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 8px 16px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 80px;
+            color: #cbd5e1;
+            font-size: 14px;
+        }
+
+        @media(max-width: 768px) {
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .menu a {
+                margin: 0 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+
+    <div class="container">
+
+        <nav>
+            <div class="logo">NeoWave</div>
+
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Projects</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </nav>
+
+        <section class="hero">
+
+            <div class="hero-text">
+                <h1>Create <span>Future Ready</span> Web Experiences</h1>
+
+                <p>
+                    A modern glassmorphism-inspired landing page with animated gradients,
+                    responsive design, and premium UI aesthetics using only HTML & CSS.
+                </p>
+
+                <a href="#" class="btn">Explore Now</a>
+            </div>
+
+            <div class="card">
+                <h2>Developer Stack</h2>
+
+                <p>
+                    Build stylish, responsive and interactive websites with modern frontend technologies.
+                </p>
+
+                <div class="skills">
+                    <div class="skill">HTML5</div>
+                    <div class="skill">CSS3</div>
+                    <div class="skill">JavaScript</div>
+                    <div class="skill">React</div>
+                    <div class="skill">UI/UX</div>
+                    <div class="skill">Animations</div>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            Designed with ❤ by Diwakar Chaudhary
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
