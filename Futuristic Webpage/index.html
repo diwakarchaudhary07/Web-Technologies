@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber UI</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+            min-height: 100vh;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: #111827;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #22d3ee;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #22d3ee;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: #22d3ee;
+        }
+
+        .hero p {
+            max-width: 700px;
+            line-height: 1.7;
+            color: #cbd5e1;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            background: #22d3ee;
+            color: black;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            background: white;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding: 40px;
+        }
+
+        .card {
+            width: 300px;
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.4s;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: #22d3ee;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #111827;
+            margin-top: 40px;
+            color: #94a3b8;
+        }
+
+        @media(max-width:768px) {
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">CyberUI</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <h1>Build <span>Modern Websites</span></h1>
+
+        <p>
+            Create responsive and attractive websites using HTML and CSS.
+            This is a futuristic UI design with hover animations and clean layout.
+        </p>
+
+        <button class="btn">Get Started</button>
+
+    </section>
+
+    <section class="cards">
+
+        <div class="card">
+            <h2>Web Design</h2>
+            <p>
+                Beautiful and responsive website layouts for modern applications.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Frontend</h2>
+            <p>
+                Interactive frontend development using HTML, CSS and JavaScript.
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>UI/UX</h2>
+            <p>
+                Clean user interfaces with smooth animations and user experience.
+            </p>
+        </div>
+
+    </section>
+
+    <footer>
+
+        © 2026 Designed By Diwakar Chaudhary
+
+    </footer>
+
+</body>
+
+</html>
