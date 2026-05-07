@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Future UI</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #050816;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: float 10s infinite alternate;
+        }
+
+        .c1 {
+            width: 300px;
+            height: 300px;
+            background: #00f7ff;
+            top: -50px;
+            left: -50px;
+        }
+
+        .c2 {
+            width: 250px;
+            height: 250px;
+            background: #ff00ff;
+            bottom: -50px;
+            right: -50px;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(50px);
+            }
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 0;
+        }
+
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: #00f7ff;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin-left: 25px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        nav a:hover {
+            color: #00f7ff;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 50px 8%;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .hero-text h1 {
+            font-size: 70px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero-text span {
+            color: #00f7ff;
+            text-shadow: 0 0 15px #00f7ff;
+        }
+
+        .hero-text p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 35px;
+            background: #00f7ff;
+            color: black;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: 0.4s;
+            box-shadow: 0 0 20px #00f7ff;
+        }
+
+        .btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px #00f7ff;
+        }
+
+        .glass-card {
+            width: 350px;
+            padding: 35px;
+            border-radius: 25px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .glass-card h2 {
+            color: #00f7ff;
+            margin-bottom: 15px;
+        }
+
+        .glass-card p {
+            color: #cbd5e1;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .skill {
+            padding: 10px 18px;
+            border-radius: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: #00f7ff;
+            color: black;
+            transform: translateY(-5px);
+        }
+
+        .services {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .services h1 {
+            font-size: 50px;
+            margin-bottom: 50px;
+        }
+
+        .service-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service {
+            background: rgba(255, 255, 255, 0.06);
+            padding: 35px;
+            border-radius: 20px;
+            transition: 0.4s;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .service:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0, 247, 255, 0.3);
+        }
+
+        .service h2 {
+            color: #00f7ff;
+            margin-bottom: 15px;
+        }
+
+        .service p {
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #94a3b8;
+            background: rgba(255, 255, 255, 0.04);
+            margin-top: 50px;
+        }
+
+        @media(max-width:768px) {
+
+            .hero-text h1 {
+                font-size: 45px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bg">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+    </div>
+
+    <header>
+
+        <div class="logo">NEON-X</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Next Gen <span>Web Design</span></h1>
+
+            <p>
+                Create futuristic and premium user interfaces using HTML and CSS.
+                Modern glassmorphism effects, neon glow, responsive sections,
+                and smooth hover animations.
+            </p>
+
+            <a href="#" class="btn">Explore More</a>
+
+        </div>
+
+        <div class="glass-card">
+
+            <h2>Frontend Skills</h2>
+
+            <p>
+                Build attractive and responsive web applications with modern UI concepts.
+            </p>
+
+            <div class="skills">
+
+                <div class="skill">HTML5</div>
+                <div class="skill">CSS3</div>
+                <div class="skill">JavaScript</div>
+                <div class="skill">React</div>
+                <div class="skill">UI/UX</div>
+                <div class="skill">Animations</div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="services">
+
+        <h1>Our Services</h1>
+
+        <div class="service-box">
+
+            <div class="service">
+                <h2>Web Development</h2>
+                <p>
+                    Professional responsive websites with modern layouts and animations.
+                </p>
+            </div>
+
+            <div class="service">
+                <h2>UI/UX Design</h2>
+                <p>
+                    Creative interfaces with clean user experience and futuristic design.
+                </p>
+            </div>
+
+            <div class="service">
+                <h2>Frontend Projects</h2>
+                <p>
+                    Interactive frontend applications using latest technologies.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        © 2026 NEON-X | Designed By Diwakar Chaudhary
+
+    </footer>
+
+</body>
+
+</html>
