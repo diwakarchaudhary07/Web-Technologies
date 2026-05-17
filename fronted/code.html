@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creative Landing Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #f4f7ff;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        header {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #4f46e5;
+        }
+
+        nav a {
+            text-decoration: none;
+            margin-left: 25px;
+            color: #333;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #4f46e5;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 80px 8%;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            color: #111827;
+            margin-bottom: 20px;
+        }
+
+        .hero-text span {
+            color: #4f46e5;
+        }
+
+        .hero-text p {
+            color: #555;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            padding: 14px 35px;
+            border: none;
+            background: #4f46e5;
+            color: white;
+            border-radius: 40px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #3730a3;
+        }
+
+        /* Hero Image */
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .circle {
+            width: 350px;
+            height: 350px;
+            background: linear-gradient(135deg, #4f46e5, #06b6d4);
+            border-radius: 50%;
+            position: relative;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .circle::before {
+            content: "";
+            position: absolute;
+            width: 280px;
+            height: 280px;
+            background: white;
+            border-radius: 50%;
+            top: 35px;
+            left: 35px;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* Features */
+        .features {
+            padding: 80px 8%;
+            background: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 42px;
+            color: #111827;
+        }
+
+        .feature-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .feature-card {
+            background: #f9fafb;
+            padding: 35px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.4s;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-card h3 {
+            margin: 20px 0;
+            color: #4f46e5;
+        }
+
+        .feature-card p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Gallery */
+        .gallery {
+            padding: 80px 8%;
+            background: #eef2ff;
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 250px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Contact */
+        .contact {
+            padding: 80px 8%;
+            background: white;
+            text-align: center;
+        }
+
+        .contact input {
+            width: 300px;
+            max-width: 90%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 30px;
+            outline: none;
+            margin-right: 10px;
+        }
+
+        .contact button {
+            padding: 14px 30px;
+            border: none;
+            border-radius: 30px;
+            background: #4f46e5;
+            color: white;
+            cursor: pointer;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media(max-width:768px) {
+
+            .hero {
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 42px;
+            }
+
+            nav {
+                display: none;
+            }
+
+            .circle {
+                width: 260px;
+                height: 260px;
+            }
+
+            .circle::before {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">CreativeX</div>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Features</a>
+            <a href="#">Gallery</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+
+        <div class="hero-text">
+            <h1>Build Your <span>Dream Website</span></h1>
+
+            <p>
+                Create modern, responsive and animated websites using HTML, CSS and JavaScript.
+            </p>
+
+            <button class="btn" onclick="showAlert()">Explore More</button>
+        </div>
+
+        <div class="hero-image">
+            <div class="circle"></div>
+        </div>
+
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+
+        <div class="section-title">
+            <h2>Awesome Features</h2>
+        </div>
+
+        <div class="feature-box">
+
+            <div class="feature-card">
+                <h3>Responsive</h3>
+                <p>
+                    Mobile friendly design that works perfectly on every device.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Modern UI</h3>
+                <p>
+                    Stylish layouts with beautiful animations and clean interface.
+                </p>
+            </div>
+
+            <div class="feature-card">
+                <h3>Fast Performance</h3>
+                <p>
+                    Optimized code for smooth and fast loading experience.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery">
+
+        <div class="section-title">
+            <h2>Our Gallery</h2>
+        </div>
+
+        <div class="gallery-container">
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" alt="">
+            </div>
+
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+
+        <div class="section-title">
+            <h2>Subscribe Now</h2>
+        </div>
+
+        <input type="email" id="email" placeholder="Enter your email">
+        <button onclick="subscribe()">Subscribe</button>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 CreativeX | All Rights Reserved
+    </footer>
+
+    <script>
+
+        function showAlert() {
+            alert("Welcome to CreativeX Website!");
+        }
+
+        function subscribe() {
+            let email = document.getElementById("email").value;
+
+            if (email === "") {
+                alert("Please enter your email");
+            }
+            else {
+                alert("Subscribed Successfully!");
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
