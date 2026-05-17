@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Web Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Navbar */
+        nav {
+            width: 100%;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .hero-content span {
+            color: #38bdf8;
+        }
+
+        .hero-content p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.8;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 14px 35px;
+            border: none;
+            border-radius: 40px;
+            background: #38bdf8;
+            color: #000;
+            font-weight: bold;
+            text-decoration: none;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            background: #0ea5e9;
+        }
+
+        /* Cards */
+        .services {
+            padding: 80px 8%;
+            background: #111827;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .title h2 {
+            font-size: 40px;
+            color: #38bdf8;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.4s;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin: 20px 0;
+            color: #38bdf8;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        /* Counter Section */
+        .counter-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: #0f172a;
+        }
+
+        .counter {
+            font-size: 60px;
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 30px;
+            text-align: center;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+        /* Responsive */
+        @media(max-width:768px) {
+            .hero-content h1 {
+                font-size: 40px;
+            }
+
+            nav ul {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Diwakar</div>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Create <span>Amazing</span> Websites</h1>
+
+            <p>
+                Modern responsive web design using HTML, CSS and JavaScript.
+                Smooth animations, clean UI and attractive layout.
+            </p>
+
+            <a href="#" class="btn" onclick="showMessage()">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="title">
+            <h2>Our Services</h2>
+        </div>
+
+        <div class="card-container">
+
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>
+                    Beautiful and modern UI design with responsive layouts.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Frontend</h3>
+                <p>
+                    Fast and interactive frontend development using latest technologies.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Backend</h3>
+                <p>
+                    Powerful backend systems with secure database integration.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Counter -->
+    <section class="counter-section">
+        <div class="counter" id="counter">0</div>
+        <h2>Projects Completed</h2>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Modern Web Page | Designed with HTML CSS JS
+    </footer>
+
+    <script>
+        // Button Click
+        function showMessage() {
+            alert("Welcome to the Modern Website!");
+        }
+
+        // Counter Animation
+        let count = 0;
+        let target = 500;
+
+        let counter = document.getElementById("counter");
+
+        let interval = setInterval(() => {
+            count++;
+            counter.innerText = count;
+
+            if (count >= target) {
+                clearInterval(interval);
+            }
+        }, 5);
+    </script>
+
+</body>
+
+</html>
